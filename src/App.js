@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Rockets />}/>
-        <Route exact path="/rocket" element={<Rocket />} />
+        <Route exact path="/rocket/:id" element={<Rocket />} />
       </Routes>
     </BrowserRouter>
   );
