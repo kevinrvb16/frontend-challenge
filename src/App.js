@@ -1,10 +1,18 @@
-import { getRockets } from './api/client';
+import Rockets from "./pages/rockets";
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from "react-router-dom";
+import Rocket from "./pages/rocket";
 function App() {
   return (
-    <div className="App">
-      Work on progress...
-      <button onClick={getRockets}>Get Rockets</button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Rockets />}/>
+        <Route exact path="/rocket" element={<Rocket />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
